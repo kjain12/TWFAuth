@@ -27,24 +27,9 @@ function Loginswitch(){
 firebase.auth().onAuthStateChanged((user)=>{
     if(user){
         /* console.log(user); */
-        /* location.replace("home.html") */
+        location.replace("home.html");
     }
 })
-
-const user = firebase.auth().currentUser;
-if (user !== null) {
-  // The user object has basic properties such as display name, email, etc.
-  const displayName = user.displayName;
-  const email = user.email;
-  const photoURL = user.photoURL;
-  const emailVerified = user.emailVerified;
-  console.log(displayName);
-
-  // The user's ID, unique to the Firebase project. Do NOT use
-  // this value to authenticate with your backend server, if
-  // you have one. Use User.getToken() instead.
-  const uid = user.uid;
-}
 
 
 function Login(){
@@ -54,7 +39,7 @@ const password = document.getElementById("password").value;
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    console.log(user);
+    //console.log(user);
     // ...
   })
   .catch((error) => {
