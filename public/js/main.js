@@ -11,7 +11,7 @@ const signup = document.getElementsByClassName('signup-container');
 
 const logswitch = document.getElementsByClassName('login-switch');
 const signswitch = document.getElementsByClassName('signup-switch');
-const loginform = document.getElementById('loginForm');
+
 /* console.log(signswitch[0]); */
 
 function signUPswitch(){
@@ -33,7 +33,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
 function Login(){
     const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+const password = document.getElementById("password").value;
     firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userinfo) => {
     alert("Sign in successfully");
@@ -42,14 +42,13 @@ function Login(){
     var errorMessage = error.message;
     alert(errorMessage);
   });
-  loginform.reset();
 }
 
 function Signup(){
     const email = document.getElementById("sign-email").value;
     const password = document.getElementById("sign-password").value;
     /* const username = document.getElementById("sign-name").value; */
-   /*  console.log(username); */
+    console.log(username);
     firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userinfo) => {
     alert("Sign up successfully");
