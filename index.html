@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animated Login Form</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    </head>
+    <body>
+        <div class = "container">
+            <div class="main-container">
+                    <img class="avatar" src="img/undraw_profile_pic_ic5t.svg">
+                    <div class="switch">
+                        <h4 class="signup-switch" onclick="signUPswitch()">Sign Up</h4>
+                        <h4 class="login-switch" onclick="Loginswitch()">Login</h4>
+                    </div>
+                    <div class="login-container">
+                        <form onsubmit="Login()" id="loginForm">
+                        <div class="input-div">
+                            <label>Email</label>
+                            <input id="email" class="input" type="email">
+                        </div>     
+                        <div class="input-div">
+                            <label>Password</label>
+                            <input id="password" class="input" type="password">
+                        </div>     
+                    <a href = "#">Forgot Passsword</a>
+                    <input type="submit" class="btn" value="Login">
+                        </form>
+                    </div>
+                    <div class="signup-container">
+                        <form onsubmit="Signup()" id="signupForm">
+                        <div class="input-div">
+                            <label>Email</label>
+                            <input id="sign-email" class="input" type="email">
+                        </div>     
+                        <div class="input-div">
+                            <label>Pasword</label>
+                            <input id="sign-password" class="input" type="password">
+                        </div>     
+                    <input type="submit" class="btn" value="Sign Up">
+                        </form>
+                    </div>
+            </div>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="js/firebase.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

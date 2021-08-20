@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logout{
+            width:50%;
+            height: 50px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor:pointer;
+            background: white;
+            border: 1px solid #32be8f;
+            font-family: 'Poppins',sans-serif;
+            transition: .5s;
+        }
+
+        .logout:hover{
+            background-image: linear-gradient(to right,#32be8f, #38d39f,#32be8f);
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div style="margin:100px">
+        <h1 id="user" class="message">Hello,Please Sign in First</h1>
+        <div class="success"><h3>Welcome to TWF Auth, You are successfully logged in!!!</h3></div><br/>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+</center>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="js/firebase.js"></script>
+
+<script type="text/javascript" src="js/home.js"></script>
+</body>
+</html>
